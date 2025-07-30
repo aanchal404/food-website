@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Menu Page | Delicious Bites</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-image: url('images/m1.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      padding: 30px;
+      color: #2c3e50;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #e67e22;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    table {
+      width: 90%;
+      margin: 0 auto 30px;
+      border-collapse: collapse;
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+      vertical-align: middle;
+    }
+
+    th {
+      background-color: #e67e22;
+      color: white;
+      font-size: 18px;
+    }
+
+    td img {
+      display: block;
+      margin: 10px auto 0;
+      width: 80px;
+      height: 80px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    tr:hover {
+      background-color: #fceae3;
+      transition: background-color 0.3s;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      color: #2980b9;
+      margin-top: 15px;
+    }
+
+    a:hover {
+      color: #16a085;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #fff;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    @media (max-width: 768px) {
+      table, th, td {
+        font-size: 14px;
+      }
+
+      td img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Delicious Food - Menu</h1>
+
+  <table>
+    <tr>
+      <th>Dish Name</th>
+      <th>Description</th>
+      <th>Price</th>
+    </tr>
+    <tr>
+      <td>Paneer Tikka <img src="images/paneer.jpg" alt="Paneer Tikka"></td>
+      <td>Grilled cottage cheese with spices</td>
+      <td>₹180</td>
+    </tr>
+    <tr>
+      <td>Mushroom Chilli <img src="images/mushroom.jpg" alt="Mushroom Chilli"></td>
+      <td>Grilled mushrooms with onions, soya & chili sauce</td>
+      <td>₹250</td>
+    </tr>
+    <tr>
+      <td>Chocolate Brownie <img src="images/cho.jpg" alt="Brownie"></td>
+      <td>Rich chocolate dessert with nuts</td>
+      <td>₹120</td>
+    </tr>
+    <tr>
+      <td>Lemon Mojito <img src="images/lemon.jpg" alt="Lemon Mojito"></td>
+      <td>Refreshing drink with mint and lemon</td>
+      <td>₹90</td>
+    </tr>
+    <tr>
+      <td>Margherita Pizza <img src="images/pizza.jpg" alt="Pizza"></td>
+      <td>Tomato sauce, mozzarella & basil</td>
+      <td>₹180</td>
+    </tr>
+    <tr>
+      <td>Sandwich <img src="images/img-3.jpg" alt="Sandwich"></td>
+      <td>Stuffed bread with veggies and cheese</td>
+      <td>₹150</td>
+    </tr>
+    <tr>
+      <td>Burger <img src="images/burger.jpg" alt="Burger"></td>
+      <td>Grilled bun with fillings and sauces</td>
+      <td>₹120</td>
+    </tr>
+    <tr>
+      <td>Kit Kat Shake <img src="images/kit-kat.jpg" alt="Kit Kat Shake"></td>
+      <td>Kit Kat blended with ice cream and milk</td>
+      <td>₹90</td>
+    </tr>
+  </table>
+
+  <a href="index.html">← Back to Home</a>
+
+  <footer>
+    © 2025 Delicious Foods. All rights reserved.
+  </footer>
+
+</body>
+</html>

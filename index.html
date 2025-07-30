@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My First Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url('images/backgr.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      font-family: 'Poppins', sans-serif;
+      color: #2c3e50;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 0 10px;
+    }
+
+    header h1 {
+      font-size: 52px;
+      color: #120e0e;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    }
+
+    nav {
+      background-color: rgba(255, 255, 255, 0.85);
+      margin: 20px auto;
+      padding: 15px;
+      width: 90%;
+      max-width: 960px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #e74c3c;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #c0392b;
+      text-decoration: underline;
+    }
+
+    section {
+      max-width: 960px;
+      margin: 30px auto;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 1s ease;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 30px;
+      color: #34495e;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .social {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .social a img {
+      width: 40px;
+      height: 40px;
+      margin: 0 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .social a:hover img {
+      transform: scale(1.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: white;
+      background: rgba(0, 0, 0, 0.6);
+      margin-top: 50px;
+      font-size: 14px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      section {
+        padding: 20px;
+      }
+
+      header h1 {
+        font-size: 38px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Food Blog</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="menu.html">Menu</a>
+    <a href="food_gallery.html">Food Gallery</a>
+    <a href="about_us.html">About Us</a>
+    <a href="contact_us.html">Contact Us</a>
+    <a href="sign_in.html">Sign In</a>
+  </nav>
+
+  <section>
+    <h2>About Food Blog</h2>
+    <p>
+      Welcome to <strong>Delicious Bites</strong>, your ultimate destination for mouthwatering recipes, cooking tips, and food inspiration! Whether you're a seasoned chef or a home cook just getting started, our blog is filled with delicious ideas to bring flavor to your kitchen.
+      <br><br>
+      From easy weeknight meals and festive desserts to traditional dishes and global cuisines, we explore it all with passion and creativity. Each recipe is crafted with love, tested to perfection, and comes with step-by-step instructions to make your cooking experience stress-free and joyful.
+    </p>
+  </section>
+
+  <div class="social">
+    <a href="https://www.facebook.com/"><img src="images/fb.png" alt="Facebook"></a>
+    <a href="https://www.instagram.com"><img src="images/insta.png" alt="Instagram"></a>
+    <a href="https://www.whatsapp.com/"><img src="images/whatsapp.png" alt="WhatsApp"></a>
+  </div>
+
+  <footer>
+    &copy; 2025 Delicious Bites | Designed with ❤️ for food lovers
+  </footer>
+
+</body>
+</html>
