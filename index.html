@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My First Website</title>
+  <title>My first Website</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
@@ -13,55 +13,79 @@
     }
 
     body {
-      background-image: url('images/backgr.jpg');
-      background-size: cover;
-      background-attachment: fixed;
+      background: linear-gradient(to right, #ffe5ec, #e0f7fa);
       font-family: 'Poppins', sans-serif;
       color: #2c3e50;
+    }
+    .hero {
+      width: 100%;
+      max-height: 450px;
+      overflow: hidden;
+    }
+
+    .hero img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
     header {
       text-align: center;
-      padding: 40px 0 10px;
+      padding: 30px 20px 10px;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
+    .featured img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+}
 
-    header h1 {
+.featured div:hover img {
+  transform: scale(1.08) rotate(1deg);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+     header h1 {
       font-size: 52px;
-      color: #120e0e;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+      color: #e74c3c;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.1);
     }
 
     nav {
-      background-color: rgba(255, 255, 255, 0.85);
-      margin: 20px auto;
+      background: rgba(255, 255, 255, 0.85);
       padding: 15px;
-      width: 90%;
-      max-width: 960px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin: 10px auto;
     }
 
     nav a {
-      margin: 0 15px;
       text-decoration: none;
       color: #e74c3c;
       font-weight: 600;
-      transition: color 0.3s ease;
+      margin: 10px 20px;
+      transition: all 0.3s ease;
     }
 
     nav a:hover {
-      color: #c0392b;
-      text-decoration: underline;
+      color: white;
+      background: #e74c3c;
+      padding: 6px 12px;
+      border-radius: 6px;
     }
 
     section {
-      max-width: 960px;
-      margin: 30px auto;
+      max-width: 1000px;
+      margin: 40px auto;
       background: rgba(255, 255, 255, 0.9);
       padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       animation: fadeIn 1s ease;
     }
 
@@ -78,9 +102,43 @@
       text-align: center;
     }
 
+    .featured {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .featured div {
+      width: 280px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .featured div:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .featured img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .featured p {
+      padding: 12px;
+      font-weight: 600;
+      color: #e74c3c;
+    }
+
     .social {
       text-align: center;
-      margin-top: 40px;
+      margin: 50px 0 20px;
     }
 
     .social a img {
@@ -98,9 +156,9 @@
       text-align: center;
       padding: 20px;
       color: white;
-      background: rgba(0, 0, 0, 0.6);
-      margin-top: 50px;
+      background: #2c3e50;
       font-size: 14px;
+      margin-top: 30px;
     }
 
     @keyframes fadeIn {
@@ -108,33 +166,31 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Responsive Design */
     @media (max-width: 768px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
-
-      section {
-        padding: 20px;
+      nav {
+        flex-direction: column;
+        gap: 10px;
       }
 
       header h1 {
         font-size: 38px;
       }
+
+      .featured {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Food Blog</h1>
+    <h1>Delicious Bites</h1>
   </header>
 
   <nav>
     <a href="index.html">Home</a>
     <a href="recipes.html">Recipes</a>
-    <a href="menu.html">Menu</a>
     <a href="food_gallery.html">Food Gallery</a>
     <a href="about_us.html">About Us</a>
     <a href="contact_us.html">Contact Us</a>
@@ -142,22 +198,38 @@
   </nav>
 
   <section>
-    <h2>About Food Blog</h2>
+    <h2>Welcome to Our Food Blog</h2>
     <p>
-      Welcome to <strong>Delicious Bites</strong>, your ultimate destination for mouthwatering recipes, cooking tips, and food inspiration! Whether you're a seasoned chef or a home cook just getting started, our blog is filled with delicious ideas to bring flavor to your kitchen.
-      <br><br>
-      From easy weeknight meals and festive desserts to traditional dishes and global cuisines, we explore it all with passion and creativity. Each recipe is crafted with love, tested to perfection, and comes with step-by-step instructions to make your cooking experience stress-free and joyful.
+      Welcome to <strong>Food Blog</strong>your go-to destination for tasty recipes, creative dishes, and culinary inspiration. Whether you're cooking your first meal or mastering your tenth cake, we’re here to help you fall in love with food.
     </p>
+  </section>
+
+  <section>
+    <h2>Tasty Dishes</h2>
+    <div class="featured">
+      <div>
+        <img src="images/hakkanoodle.jpg" alt="Noodles">
+        <p>Hakka Noodles</p>
+      </div>
+      <div>
+        <img src="images/cake.jpg" alt="Chocolate Cake">
+        <p>Chocolate Cake</p>
+      </div>
+      <div>
+        <img src="images/gulab-jamun.jpg" alt="gulab janum">
+        <p>Gulab Jamun</p>
+      </div>
+    </div>
   </section>
 
   <div class="social">
     <a href="https://www.facebook.com/"><img src="images/fb.png" alt="Facebook"></a>
-    <a href="https://www.instagram.com"><img src="images/insta.png" alt="Instagram"></a>
+    <a href="https://www.instagram.com/"><img src="images/insta.png" alt="Instagram"></a>
     <a href="https://www.whatsapp.com/"><img src="images/whatsapp.png" alt="WhatsApp"></a>
   </div>
 
   <footer>
-    &copy; 2025 Delicious Bites | Designed with ❤️ for food lovers
+    &copy; 2025 Delicious Bites | Crafted with ❤️ by Food Lovers
   </footer>
 
 </body>

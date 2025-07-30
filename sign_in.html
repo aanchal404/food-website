@@ -1,118 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
-    <style>
-        
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign In</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        body {
-            background-image: url("images/sig.jpg");
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-        }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url("images/sig.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: #fff;
+    }
 
-        h1 {
-            font-style: italic;
-            margin-bottom: 20px;
-            text-shadow: 1px 1px 3px black;
-        }
+    h1 {
+      margin-bottom: 25px;
+      font-size: 26px;
+      font-style: italic;
+      text-align: center;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+      animation: glow 3s infinite ease-in-out;
+    }
 
-        
-        .form-container {
-            background: rgba(0, 0, 0, 0.6);
-            padding: 30px 40px;
-            border-radius: 12px;
-            width: 320px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-        }
+    @keyframes glow {
+      0% { text-shadow: 2px 2px 6px #000; }
+      50% { text-shadow: 2px 2px 20px #4CAF50; }
+      100% { text-shadow: 2px 2px 6px #000; }
+    }
 
-        .form-container h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #f0f0f0;
-        }
+    .form-container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 30px 40px;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 360px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 1s ease-in;
+    }
 
-        label {
-            font-size: 14px;
-            display: block;
-            margin-bottom: 5px;
-        }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-        input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: none;
-            border-radius: 6px;
-            font-size: 14px;
-        }
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 22px;
+      color: #f0f0f0;
+    }
 
-        button {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            background-color: #4CAF50;
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+    label {
+      font-size: 14px;
+      margin-bottom: 5px;
+      display: block;
+    }
 
-        button:hover {
-            background-color: #45a049;
-        }
+    input {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      outline: none;
+      background-color: rgba(255, 255, 255, 0.85);
+      transition: 0.3s;
+    }
 
-        p {
-            text-align: center;
-            margin-top: 15px;
-        }
+    input:focus {
+      box-shadow: 0 0 5px 2px #4CAF50;
+      background-color: white;
+    }
 
-        a {
-            color: #ddd;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      background: linear-gradient(135deg, #4CAF50, #2ecc71);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        a:hover {
-            color: #fff;
-            text-decoration: underline;
-        }
-    </style>
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    p {
+      text-align: center;
+      margin-top: 18px;
+      font-size: 14px;
+    }
+
+    a {
+      color: #ffffffcc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+      .form-container {
+        padding: 25px;
+        width: 90%;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <h1>Welcome back, please sign in to continue</h1>
+  <h1>Welcome back, please sign in to continue</h1>
 
-    <div class="form-container">
-        <h2>Sign In</h2>
-        <form action="#" method="post">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+  <div class="form-container">
+    <h2>Sign In</h2>
+    <form action="#" method="post">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
 
-            <button type="submit">Sign In</button>
-            <p><a href="index.html">Back to Home</a></p>
-        </form>
-    </div>
+      <button type="submit">Sign In</button>
+      <p><a href="index.html">← Back to Home</a></p>
+    </form>
+  </div>
 
 </body>
 </html>

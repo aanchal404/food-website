@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Food Recipes</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
@@ -54,17 +54,22 @@
       padding: 0 30px 50px;
     }
 
-    .recipe {
+    a.recipe {
+      text-decoration: none;
+      color: inherit;
       background-color: #fff;
       border-radius: 15px;
       padding: 20px;
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       animation: fadeIn 1s ease;
+      position: relative;
+      display: block;
     }
 
-    .recipe:hover {
+    a.recipe:hover {
       transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
 
     @keyframes fadeIn {
@@ -140,61 +145,61 @@
   <h1>✨ Tasty Food Recipes ✨</h1>
 
   <div class="container">
-    <div class="recipe">
+    <a href="paneer-tikka.html" class="recipe">
       <h2>1. Paneer Tikka</h2>
       <img src="images/paneer.jpg" alt="Paneer Tikka">
       <p><strong>Ingredients:</strong> Paneer, Yogurt, Spices, Lemon Juice, Onion, Capsicum.<br>
       <strong>Method:</strong> Marinate paneer in yogurt and spices. Grill or bake until golden.</p>
-    </div>
+    </a>
 
-    <div class="recipe">
+    <a href="mushroom-chilli.html" class="recipe">
       <h2>2. Mushroom Chilli</h2>
       <img src="images/mushroom.jpg" alt="Mushroom Chilli">
       <p><strong>Ingredients:</strong> Mushrooms, Soy Sauce, Onion, Garlic, Capsicum, Green Chilli.<br>
       <strong>Method:</strong> Stir-fry mushrooms with sauces and vegetables until cooked.</p>
-    </div>
+    </a>
 
-    <div class="recipe">
+    <a href="chocolate-brownie.html" class="recipe">
       <h2>3. Chocolate Brownie</h2>
       <img src="images/cho.jpg" alt="Chocolate Brownie">
       <p><strong>Ingredients:</strong> Cocoa powder, Flour, Sugar, Eggs, Butter.<br>
       <strong>Method:</strong> Mix all ingredients and bake at 180°C for 25-30 minutes.</p>
-    </div>
+    </a>
 
-    <div class="recipe">
+    <a href="lemon-mojito.html" class="recipe">
       <h2>4. Lemon Mojito</h2>
       <img src="images/lemon.jpg" alt="Lemon Mojito">
       <p><strong>Ingredients:</strong> Lemon, Mint Leaves, Sugar, Soda Water, Ice Cubes.<br>
       <strong>Method:</strong> Muddle mint and lemon, add sugar, top with soda and ice.</p>
-    </div>
+    </a>
 
-    <div class="recipe">
+    <a href="pizza.html" class="recipe">
       <h2>5. Margherita Pizza</h2>
       <img src="images/pizza.jpg" alt="Pizza">
       <p><strong>Ingredients:</strong> Pizza Base, Tomato Sauce, Mozzarella Cheese, Basil Leaves.<br>
       <strong>Method:</strong> Spread sauce, add cheese and basil. Bake at 200°C for 15 minutes.</p>
-    </div>
+    </a>
 
-    <div class="recipe">
+    <a href="sandwich.html" class="recipe">
       <h2>6. Sandwich</h2>
       <img src="images/img-3.jpg" alt="Sandwich">
       <p><strong>Ingredients:</strong> Bread, Cheese, Tomato, Cucumber, Lettuce, Mayonnaise.<br>
       <strong>Method:</strong> Layer ingredients between bread slices. Grill or serve fresh.</p>
-    </div>
+    </a>
 
-    <div class="recipe">
+    <a href="burger.html" class="recipe">
       <h2>7. Burger</h2>
       <img src="images/burger.jpg" alt="Burger">
       <p><strong>Ingredients:</strong> Burger Buns, Patty (Veg/Non-Veg), Lettuce, Tomato, Cheese.<br>
       <strong>Method:</strong> Toast bun, add patty and toppings, serve with sauce.</p>
-    </div>
+    </a>
 
-    <div class="recipe">
+    <a href="kitkat-shake.html" class="recipe">
       <h2>8. Kit Kat Shake</h2>
       <img src="images/kit-kat.jpg" alt="Kit Kat Shake">
       <p><strong>Ingredients:</strong> Milk, Vanilla Ice Cream, Kit Kat Bars, Chocolate Syrup.<br>
       <strong>Method:</strong> Blend all ingredients until smooth. Serve chilled.</p>
-    </div>
+    </a>
   </div>
 
   <center>
@@ -202,7 +207,7 @@
   </center>
 
   <footer>
-    &copy; 2025 Foodie Heaven | Made with ❤️ by Aanchal Yadav
+    &copy; 2025 Foodie Heaven | Made with ❤ by Aanchal Yadav
   </footer>
 
 </body>
